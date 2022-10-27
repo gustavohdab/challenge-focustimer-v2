@@ -8,7 +8,7 @@
 <br>
 
 <p align="center">
-  <img alt="focus timer challenge v2" src="assets/focustimerv2.gif.gif" width="100%">
+  <img alt="focus timer challenge v2" src="assets/focustimerv2.gif" width="100%">
 </p>
 
 ## 🚀 Tecnologias
