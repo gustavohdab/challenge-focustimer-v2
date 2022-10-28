@@ -10,14 +10,14 @@
 <h2 align="center"> Focus Timer Pomodoro Challenge 01 </h2>
 
 <p align="center">
-  <img alt="focus timer challenge v2" src="assets/focustimerv2.gif" width="70%">
+  <img alt="focus timer challenge v2" src="assets/focustimerv2.gif" width="100%">
 </p>
 
 
 <h2 align="center"> Focus Timer Pomodoro Challenge 02 (Dark Mode & Volume)</h2>
 
 <p align="center">
-  <img alt="focus timer challenge v3" src="assets/focustimerv3.gif" width="70%">
+  <img alt="focus timer challenge v3" src="assets/focustimerv3.gif" width="100%">
 </p>
 
 ## 🚀 Tecnologias
