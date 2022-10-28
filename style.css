@@ -1,7 +1,6 @@
 :root{
     --background-color: #FFFFFF;
     --text-color: #323238;
-
     font-size: 62.5%;
 }
 
@@ -16,6 +15,14 @@ body{
     color: var(--text-color);
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+#theme{
+    position: absolute;
+    right: 2.4rem;
+    top: -1.6rem;
+    cursor: pointer;
 }
 
 #timer{
@@ -40,6 +47,10 @@ button{
     margin: 0 4rem 4rem;
 }
 
+#controls.dark path{
+    fill: #C4C4CC;
+}
+
 #controls button:hover{
     scale: 1.04;
     transition: 300ms;
@@ -60,6 +71,14 @@ button{
     padding: 1rem;
     grid-template-areas:"A E"
                         "B F";
+}
+
+#sounds.dark path:nth-child(2){
+    fill: #C4C4CC;
+}
+
+#sounds.dark path:nth-child(1){
+    fill: #29292E;
 }
 
 #sounds button:hover{
@@ -84,6 +103,23 @@ button{
     transition: 300ms;
 }
 
+#sounds.dark .fireplace path:nth-child(1):hover{
+    fill: #9d23233b;
+    transition: 300ms;
+}
+#sounds.dark .coffee-shop path:nth-child(1):hover{
+    fill: #8e9d233b;
+    transition: 300ms;
+}
+#sounds.dark .forest path:nth-child(1):hover{
+    fill: #239d343b;
+    transition: 300ms;
+}
+#sounds.dark .rain path:nth-child(1):hover{
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+
 .fireplace.selected path:nth-child(1){
     fill: #9d23233b;
     
@@ -102,12 +138,68 @@ button{
     transition: 300ms;
 }
 
-.selected path:nth-child(2) {
-    fill: #FFFFFF;
+#sounds.dark  .fireplace.selected path:nth-child(1){
+    fill: #9d23233b;
+    
+    transition: 300ms;
+}
+#sounds.dark  .coffee-shop.selected path:nth-child(1){
+    fill: #8e9d233b;
+    transition: 300ms;
+}
+#sounds.dark  .forest.selected path:nth-child(1){
+    fill: #239d343b;
+    transition: 300ms;
+}
+#sounds.dark  .rain.selected path:nth-child(1){
+    fill: #237f9d3b;
+    transition: 300ms;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 96px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    cursor: pointer;
+
+    position: absolute;
+    left: 21px;
+    bottom: 16px;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+}
+
+button.forest,
+button.rain,
+button.coffee-shop,
+button.fireplace {
+    position: relative;
+    height: 152px;
+}
+
+input:hover{
+    scale: 1.03;
+    transition: 300ms;
+}
+
+#sounds.dark input[type='range'] {
+    background-color: var(--background-color);
+
+}
+#sounds.dark input[type='range']::-webkit-slider-thumb {
+    background-color: var(--background-color);
 }
 
 #bg{
-    background-color: #237f9d3b;
+    background-color: var(--background-color);
 }
 
 @media (min-width: 768px) {
@@ -117,6 +209,12 @@ button{
         align-items: center;
         margin-top: 20%;
         gap: 3.2rem;
+    }
+    #theme{
+        position: fixed;
+        right: 6.4rem;
+        top: 6.4rem;
+        cursor: pointer;    
     }
 }
 

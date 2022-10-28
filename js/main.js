@@ -2,6 +2,7 @@ import { Sound }  from "./sounds.js";
 import { Timer } from "./timer.js";
 import { Controls } from "./controls.js";
 import { Events } from "./events.js";
+import { Swapper } from "./swapper.js";
 import { 
     buttonPlay,
     buttonPause,
@@ -15,6 +16,8 @@ import {
     soundChoiceCoffeeShop,
     soundChoiceFireplace, 
 } from "./elements.js"; 
+
+const swapper = Swapper()
 
 const sound = Sound({
     soundChoiceCoffeeShop,

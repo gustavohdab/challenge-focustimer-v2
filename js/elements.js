@@ -9,6 +9,10 @@ const soundChoiceForest = document.querySelector('.forest')
 const soundChoiceRain = document.querySelector('.rain')
 const soundChoiceCoffeeShop = document.querySelector('.coffee-shop')
 const soundChoiceFireplace = document.querySelector('.fireplace')
+const sliderForest = document.querySelector('#sliderForest')
+const sliderRain = document.querySelector('#sliderRain')
+const sliderCoffeeShop = document.querySelector('#sliderCoffeeShop')
+const sliderFireplace = document.querySelector('#sliderFireplace')
 
 export {
     buttonPlay,
@@ -22,4 +26,8 @@ export {
     soundChoiceRain,
     soundChoiceCoffeeShop,
     soundChoiceFireplace,
+    sliderForest,
+    sliderRain,
+    sliderCoffeeShop,
+    sliderFireplace
 }

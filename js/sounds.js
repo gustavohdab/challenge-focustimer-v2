@@ -2,26 +2,18 @@ export function Sound ({
     soundChoiceCoffeeShop, 
     soundChoiceFireplace,
     soundChoiceForest,
-    soundChoiceRain
+    soundChoiceRain,
 }) {
     const soundForest = new Audio("sounds/Forest.wav")
     const soundRain = new Audio("sounds/Rain.wav")
     const soundCoffeeShop = new Audio("sounds/CoffeeShop.wav")
     const soundFireplace = new Audio("sounds/Fireplace.wav")
-    
+
     soundForest.loop = true
     soundRain.loop = true
     soundCoffeeShop.loop = true
     soundFireplace.loop = true
 
-    function timeEnd(){
-        kitchenTimer.play()
-        soundChoiceForest.classList.remove('selected')
-        soundChoiceRain.classList.remove('selected')
-        soundChoiceCoffeeShop.classList.remove('selected')
-        soundChoiceFireplace.classList.remove('selected')
-    }
-    
     function pressForest() {
         soundForest.play()
         soundRain.pause()
@@ -31,7 +23,7 @@ export function Sound ({
         soundChoiceRain.classList.remove('selected')
         soundChoiceCoffeeShop.classList.remove('selected')
         soundChoiceFireplace.classList.remove('selected')
-        document.getElementById('bg').style.backgroundColor = '#239d343b'
+        // document.getElementById('bg').style.backgroundColor = '#239d343b'
     }
 
     function pressRain() {
@@ -43,7 +35,7 @@ export function Sound ({
         soundChoiceForest.classList.remove('selected')
         soundChoiceCoffeeShop.classList.remove('selected')
         soundChoiceFireplace.classList.remove('selected')
-        document.getElementById('bg').style.backgroundColor = '#237f9d3b'
+        // document.getElementById('bg').style.backgroundColor = '#237f9d3b'
     }
 
     function pressCoffeeShop() {
@@ -55,7 +47,7 @@ export function Sound ({
         soundChoiceForest.classList.remove('selected')
         soundChoiceCoffeeShop.classList.add('selected')
         soundChoiceFireplace.classList.remove('selected')
-        document.getElementById('bg').style.backgroundColor = '#8e9d233b'
+        // document.getElementById('bg').style.backgroundColor = '#8e9d233b'
     }
     
     function pressFireplace() {
@@ -67,18 +59,33 @@ export function Sound ({
         soundChoiceForest.classList.remove('selected')
         soundChoiceCoffeeShop.classList.remove('selected')
         soundChoiceFireplace.classList.add('selected')
-        document.getElementById('bg').style.backgroundColor = '#9d23233b'
+        // document.getElementById('bg').style.backgroundColor = '#9d23233b'
     }
+
+    sliderForest.addEventListener('input', () => {
+        soundForest.volume = sliderForest.value / 100
+    })
+    
+    sliderRain.addEventListener('input', () => {
+        soundRain.volume = sliderRain.value / 100
+    })
+    
+    sliderCoffeeShop.addEventListener('input', () => {
+        soundCoffeeShop.volume = sliderCoffeeShop.value / 100
+    })
+
+    sliderFireplace.addEventListener('input', () => {
+        soundFireplace.volume = sliderFireplace.value / 100
+    })
 
     return {
         pressForest,
         pressRain,
         pressCoffeeShop,
         pressFireplace,
-        timeEnd,
         soundChoiceCoffeeShop, 
         soundChoiceFireplace,
         soundChoiceForest,
-        soundChoiceRain
+        soundChoiceRain,
     }
 }
